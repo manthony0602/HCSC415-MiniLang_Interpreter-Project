@@ -3,6 +3,7 @@
 This project is a **Mini Programming Language Interpreter** built in Python that performs lexical analysis, parsing, and evaluation of a small custom language. It satisfies the requirements of a domain-specific language (DSL) by supporting variable declarations, arithmetic expressions, scoping, and output via a `print` statement.
 
 ---
+---
 
 ## What's Included in This Version
 
@@ -14,6 +15,7 @@ This final version includes a complete interpreter that:
 - Correctly supports shadowing, variable reassignment, and arithmetic logic
 - Built entirely in Python using standard libraries
 
+---
 ---
 
 ## **Features**
@@ -29,6 +31,7 @@ This final version includes a complete interpreter that:
 ✔️ Outputs the result directly to the terminal and tracks variables with scoping rules.
 
 ---
+---
 
 ## **Files Overview**
 
@@ -39,6 +42,7 @@ This final version includes a complete interpreter that:
 - **`main.py`** – Loads and runs the interpreter from a source file
 - **`test_program.txt`** – Contains sample MiniLang code to be interpreted
 
+---
 ---
 
 ## **How It Works**
@@ -57,8 +61,12 @@ This final version includes a complete interpreter that:
 }
 ```
 
-### Output ( 17.5 )
-
+### Output 
+```
+17.5
+```
+ 
+---
 ---
 
 ## **MiniLang Grammar Used**
@@ -78,61 +86,61 @@ This final version includes a complete interpreter that:
 ```
 
 ---
+---
 
 ## **Installation & Running the Project**
 
-0. **Clone the Repository**  
+1. **Clone the Repository**  
    If you haven't already, clone the project from GitHub:
 
-```bash
-git clone https://github.com/manthony0602/HCSC415-MiniLang_Interpreter-Project.git
-cd HCSC415-MiniLang_Interpreter-Project
-```
-
----
-
-1. **(Optional) Set Up a Virtual Environment**  
-   It's a good practice to use a virtual environment to keep dependencies isolated:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate      # For macOS/Linux
-venv\Scripts\activate         # For Windows
-```
-
-2. **Install Dependencies**  
-   There are **no third-party dependencies**. The entire interpreter uses Python's standard library — so you're good to go right out of the box.
-
-3. **Run the Interpreter**  
-   Once inside the project folder, run:
-
-```bash
-python3 main.py
-```
-
-4. **View the Output**  
-   The interpreter reads and executes the MiniLang source code found in `test_program.txt`. The result will be printed directly to your terminal.
-
-Example:
-
-```bash
-17.5
-```
-
-5. **Customize the Source Code**  
-   You can modify the file `test_program.txt` to test your own MiniLang programs. The syntax supports:
-
-   - Declarations like `int x = 10;`
-   - Arithmetic like `y = x + 2.5;`
-   - Nested blocks `{ ... }` with scoping
-   - Output via `print(expr);`
-
-   Simply save your changes and re-run the following in the terminal:
-
    ```bash
-   python3 main.py
+   git clone https://github.com/manthony0602/HCSC415-MiniLang_Interpreter-Project.git
+   cd HCSC415-MiniLang_Interpreter-Project
    ```
 
+2. **(Optional) Set Up a Virtual Environment**  
+   It's a good practice to use a virtual environment to keep dependencies isolated:
+
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate      # For macOS/Linux
+    venv\Scripts\activate         # For Windows
+    ```
+
+3. **Install Dependencies**  
+    There are **no third-party dependencies**. The entire interpreter uses Python's standard library — so you're good to go right out of the box.
+
+4. **Run the Interpreter**  
+    Once inside the project folder, run:
+
+    ```bash
+    python3 main.py
+    ```
+
+5. **View the Output**  
+    The interpreter reads and executes the MiniLang source code found in `test_program.txt`. The result will be printed directly to your terminal.
+
+    Example:
+
+    ```bash
+    17.5
+    ```
+
+6. **Customize the Source Code**  
+    You can modify the file `test_program.txt` to test your own MiniLang programs. The syntax supports:
+
+    - Declarations like `int x = 10;`
+    - Arithmetic like `y = x + 2.5;`
+    - Nested blocks `{ ... }` with scoping
+    - Output via `print(expr);`
+
+    Simply save your changes and re-run the following in the terminal:
+
+    ```bash
+    python3 main.py
+    ```
+
+---
 ---
 
 ### **Requirements**
@@ -141,17 +149,17 @@ Example:
 - No external libraries needed
 
 ---
+---
 
 ## **Assumptions & Design Decisions**:
+- Variable types (`int`, `float`, etc.) are not enforced at runtime. They're used only for declaration.
+- Shadowing is allowed within nested `{}` blocks.
+- Arithmetic expressiosn follow proper operator precedence (handled via recursive parsing).
+- String literals are parsed but not currently used in operations.
+- Only `void`-style `print(expr);` output is supported for side effects. 
 
-    - Variable types (`int`, `float`, etc.) are not enforced at runtime. They're used only for declaration.
-    - Shadowing is allowed within nested `{}` blocks.
-    - Arithmetic expressions follow proper operator precedence (which are handled via recursive parsing).
-    - String literals are parsed but not currently used in operations.
-    - Only void-style `print(expr);` output is supported for side effects.
-
-    ---
-    ---
+---
+---
 
 ## Author
 
